@@ -52,6 +52,7 @@ def init_detector(config, checkpoint=None, dataset=DatasetEnum.COCO, device='cud
             warnings.warn(f'Class names are not saved in the checkpoint\'s '
                           f'meta data, use {dataset.value} classes.')
             model.CLASSES = get_classes(dataset)
+
     model.cfg = config  # save the config in the model for convenience
     model.to(device)
     model.eval()
