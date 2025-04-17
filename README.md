@@ -17,7 +17,7 @@ checkpoint_file = 'model/co_dino_5scale_lsj_swin_large_3x_coco.pth'
 To run the demo, check:
 
 ```bash
-Demo/simplified1.py
+demo/simplified1.py
 ```
 
 
