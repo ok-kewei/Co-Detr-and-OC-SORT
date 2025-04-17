@@ -1,18 +1,16 @@
 ## OC-SORT + Co-DETR Integration
 
-An integration of [OC-SORT tracking](https://github.com/noahcao/OC_SORT) with [Co-DETR detection](https://github.com/Sense-X/Co-DETR).
+This work combines [OC-SORT tracking](https://github.com/noahcao/OC_SORT) for object tracking with [Co-DETR detection](https://github.com/Sense-X/Co-DETR) as the end-to-end object detector.
 
 ---
 
 ### 🔗 Pretrained Model
 
-To get the pretrained model, please refer to the [Co-DETR GitHub main page](https://github.com/Sense-X/Co-DETR).
+To get the pretrained model, please refer to the [Co-DETR GitHub main page](https://github.com/Sense-X/Co-DETR). Download the model (.pth) file and save it under model folder. 
 
-In this example, I used:
+In this example, I used checkpoint_file = 'model/co_dino_5scale_lsj_swin_large_3x_coco.pth' as it (Co-DINO 	backbone:Swin-L 	36 	LSJ 	COCO 	60.7) scores the highest in coco dataset of 60.7 box AP. 
 
-checkpoint_file = 'model/co_dino_5scale_lsj_swin_large_3x_coco.pth'
-
-### ▶️ Running the Code
+### Running the Code
 
 To run the demo, check:
 
@@ -20,8 +18,7 @@ To run the demo, check:
 demo/simplified1.py
 ```
 
-
-Customizations that I did:
+Changes made in this demo/simplified1 file:
 1. Class filter: Only tracks {'car', 'bus', 'truck'} (see line 42)
 2. Detection threshold: 0.3 (see line 38)
 3. Tracking threshold: 0.4 (see line 74)
